@@ -13,6 +13,7 @@ export const getPosts = () => async(dispatch) => {
 
 export const createPost = (post) => async (dispatch) => {
     try {
+        console.log("in actions folder");
         const {data} = await api.createPost(post);
         dispatch({ type: CREATE, payload: data });
     } catch( error) {
